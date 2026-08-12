@@ -1,0 +1,33 @@
+[Unit]
+Description=pm-calibration snapshot collector
+Documentation=https://example.invalid/pm-calibration
+# Do not fail the unit when the network is briefly down; collect.py records the
+# error in collection_runs and the timer retries in 15 minutes.
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=pmcal
+Group=pmcal
+WorkingDirectory=/opt/pm-calibration
+EnvironmentFile=/opt/pm-calibration/.env
+ExecStart=/usr/local/bin/uv run --frozen collect.py --bucket-minutes 15
+
+# A run that outlives its interval would overlap the next one. The primary key
+# makes that harmless, but killing it keeps the schedule honest.
+TimeoutStartSec=600
+Restart=no
+
+# The process only needs to read the repo and write the DuckDB file.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/pm-calibration/data
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

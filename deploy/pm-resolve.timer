@@ -1,0 +1,11 @@
+[Unit]
+Description=Settle finished events and rebuild the analysis panel
+
+[Timer]
+OnCalendar=*-*-* 04,10,16,22:20:00
+AccuracySec=1m
+Persistent=true
+Unit=pm-resolve.service
+
+[Install]
+WantedBy=timers.target

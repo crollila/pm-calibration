@@ -1,0 +1,2 @@
+venue_a,venue_b,n_rows,n_events,brier_diff,diff_lo,diff_hi,significant
+polymarket,kalshi,21733,234,6.114425067868878e-05,-0.0005717227866156097,0.0006952827310120358,False

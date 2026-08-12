@@ -1,0 +1,23 @@
+[Unit]
+Description=pm-calibration settlement and panel rebuild
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=pmcal
+Group=pmcal
+WorkingDirectory=/opt/pm-calibration
+EnvironmentFile=/opt/pm-calibration/.env
+# Runs a few times a day, not every 15 minutes: settlement is slow and every
+# --with-scores call spends Odds API credits.
+ExecStart=/usr/local/bin/uv run --frozen resolve.py --grace-minutes 240
+TimeoutStartSec=1800
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/pm-calibration/data
+
+[Install]
+WantedBy=multi-user.target

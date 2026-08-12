@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+# The database is regenerable from backfill.py and too large to track.
+data/*.duckdb
+data/*.duckdb.wal
+data/*.parquet
+
+# figures/ and results/ ARE tracked: the README embeds them, and a writeup whose
+# plots are missing from the repo is not a writeup. Regenerate with
+# `uv run -m analysis.run_all`.
+

@@ -1,0 +1,15 @@
+[Unit]
+Description=Run the pm-calibration collector every 15 minutes
+
+[Timer]
+# Aligned to the quarter hour so the snapshot bucket in the database matches
+# the wall clock, and every venue lands in the same bucket.
+OnCalendar=*:0/15
+AccuracySec=15s
+# A missed window (reboot, laptop asleep) is collected once on the next start
+# rather than silently skipped -- gaps in the panel are the thing to avoid.
+Persistent=true
+Unit=pm-collect.service
+
+[Install]
+WantedBy=timers.target

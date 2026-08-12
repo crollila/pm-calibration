@@ -1,0 +1,43 @@
+[project]
+name = "pm-calibration"
+version = "0.1.0"
+description = "Are prediction markets better calibrated than sportsbooks, and is the gap tradeable after costs?"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "matplotlib>=3.8",
+    "duckdb>=1.0",
+    "pyarrow>=16.0",   # parquet export of the analysis panel
+    "tabulate>=0.9",   # markdown tables in results/summary.md
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+# Virtual project: nothing is built or installed, modules are imported from the
+# repo root. Run everything with `uv run <script>` from this directory.
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "N"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E731"]
