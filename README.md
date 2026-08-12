@@ -4,7 +4,7 @@
 > ### Project history
 >
 > **Prediction Market Calibration Study**  
-> **May 2026 - Present** &nbsp;|&nbsp; Independent Quantitative Research
+> **March 2026 - Present** &nbsp;|&nbsp; Independent Quantitative Research
 >
 > Built a quantitative framework for evaluating whether prediction-market prices behave as calibrated probabilities. Analyzed historical market probabilities against realized outcomes, measured calibration and forecasting performance, and investigated systematic deviations that could indicate exploitable pricing edges.
 >
