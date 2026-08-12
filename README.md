@@ -1,5 +1,17 @@
 # pm-calibration
 
+<!-- project-history -->
+> ### Project history
+>
+> **Prediction Market Calibration Study**  
+> **May 2026 - Present** &nbsp;|&nbsp; Independent Quantitative Research
+>
+> Built a quantitative framework for evaluating whether prediction-market prices behave as calibrated probabilities. Analyzed historical market probabilities against realized outcomes, measured calibration and forecasting performance, and investigated systematic deviations that could indicate exploitable pricing edges.
+>
+> This repository was published to GitHub in August 2026. GitHub's repository
+> creation date reflects when the code was uploaded here, not when the work was
+> done. Prediction markets are not equities or futures. This work is tracked separately from my equities experience and is not counted toward it.
+
 **Are prediction markets better calibrated forecasters than sportsbooks, and is the gap between them tradeable after costs?**
 
 [![ci](https://github.com/crollila/pm-calibration/actions/workflows/ci.yml/badge.svg)](https://github.com/crollila/pm-calibration/actions/workflows/ci.yml)
