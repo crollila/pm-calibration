@@ -224,8 +224,8 @@ Design decisions worth defending:
 
   ```mermaid
   flowchart TD
-      P["Polymarket<br/>&quot;Philadelphia Phillies vs. St. Louis Cardinals&quot;<br/>slug: mlb-phi-stl-2026-08-10"]
-      K1["Kalshi, Phillies side<br/>&quot;Philadelphia vs St. Louis Winner?&quot;<br/>ticker: KXMLBGAME-26AUG101945PHISTL-PHI"]
+      P["Polymarket<br/>“Philadelphia Phillies vs. St. Louis Cardinals”<br/>slug: mlb-phi-stl-2026-08-10"]
+      K1["Kalshi, Phillies side<br/>“Philadelphia vs St. Louis Winner?”<br/>ticker: KXMLBGAME-26AUG101945PHISTL-PHI"]
       K2["Kalshi, Cardinals side<br/>same game, second contract<br/>ticker: KXMLBGAME-26AUG101945PHISTL-STL"]
       G["gamekeys.py<br/>parse slug / ticker,<br/>canonicalise team codes,<br/>normalise the date to US time"]
       KEY["one shared event key<br/>mlb · 2026-08-10 · phi~stl"]
@@ -354,8 +354,8 @@ flowchart TD
     G["One game: Phillies @ Cardinals<br/>snapshotted every hour for 2 days"]
     R["~30 rows in the panel<br/>45%, 45%, 46%, 45%, 44% ...<br/>all settled by the same final score"]
     G --> R
-    R --> N["Naive statistics<br/>&quot;30 independent observations!&quot;<br/>tiny error bars →<br/>false 'significant bias'"]
-    R --> H["Event-clustered statistics<br/>&quot;one game = one observation&quot;<br/>error bars ~6× wider →<br/>no bias detectable"]
+    R --> N["Naive statistics<br/>“30 independent observations!”<br/>tiny error bars →<br/>false “significant bias”"]
+    R --> H["Event-clustered statistics<br/>“one game = one observation”<br/>error bars ~6× wider →<br/>no bias detectable"]
 ```
 
 The per-bin reliability curve looks like it shows significant miscalibration. It does not.
