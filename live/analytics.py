@@ -123,8 +123,9 @@ def group_table(rows: list[dict], key) -> list[dict]:
                 "fees": sum((r["fees"] for r in rs), ZERO),
                 "roi": pnl / car if car else None,
                 "held": len(held),
-                "held_won": sum(float(r["settle_price"]) for r in held),
-                "held_implied": sum(float(r["entry_price"]) for r in held),
+                # Decimal sums: built-in float sum() rounds differently on 3.11 and 3.12.
+                "held_won": float(sum((r["settle_price"] for r in held), ZERO)),
+                "held_implied": float(sum((r["entry_price"] for r in held), ZERO)),
             }
         )
     return sorted(out, key=lambda x: (-x["n"], str(x["group"])))
