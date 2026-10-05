@@ -1,0 +1,20 @@
+{
+ "source": "Polymarket US API: GET /v1/portfolio/activities (all pages) and GET /v1/portfolio/positions, pulled read-only with the account's own key",
+ "pulled_at_utc_date": "2026-09-17",
+ "activity_counts": {
+  "ACCOUNT_WITHDRAWAL": 2,
+  "POSITION_RESOLUTION": 208,
+  "REFERRAL_BONUS": 2,
+  "TRADE": 448,
+  "TRANSFER": 2
+ },
+ "non_trading_credits_usd": {
+  "REFERRAL_BONUS": "30",
+  "TRANSFER": "237.074"
+ },
+ "withdrawals": "count only; amounts are personal and not trading results",
+ "positions_endpoint_eof": true,
+ "first_fill_utc": "2026-01-10T22:17:44.120773Z",
+ "last_fill_utc": "2026-09-17T09:19:24.966804Z",
+ "raw_sha256": "379b5cddeea34e66bfb6ceb5c36bf876ccf947c7e1184bd441d0f2a63089dc1f"
+}

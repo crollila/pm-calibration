@@ -1,0 +1,596 @@
+{
+ "capital_at_risk_closed": "14635.77077",
+ "checks": {
+  "exchange_open_positions": 4,
+  "fill_cost_match": 448,
+  "fills": 448,
+  "open_match": true,
+  "open_positions": 4,
+  "settled_markets": 208,
+  "settled_qty_match": 208,
+  "settlement_pnl": {
+   "booked_in_cost_field": 2,
+   "comparable": 198,
+   "exact": 192,
+   "other": [
+    {
+     "exchange": "1",
+     "ledger": "0.45",
+     "market_slug": "aec-cbb-miss-vand-2026-03-03"
+    }
+   ],
+   "rounding_4dp": 3
+  },
+  "volume_gaps": [
+   {
+    "exch_bought": "1",
+    "exch_realized_before": "-0.55",
+    "exch_sold": "2",
+    "feed_bought": "0",
+    "feed_sold": "1",
+    "market_slug": "aec-cbb-miss-vand-2026-03-03"
+   },
+   {
+    "exch_bought": "596",
+    "exch_realized_before": "0",
+    "exch_sold": "298",
+    "feed_bought": "298",
+    "feed_sold": "0",
+    "market_slug": "aec-nfl-sea-ne-2026-02-08"
+   }
+  ]
+ },
+ "clv": {
+  "events": 24,
+  "excluded": {
+   "combo: no closing price for the combined contract": 12,
+   "event not in public reference": 48,
+   "in-play entry: no pre-start close to compare": 145,
+   "mixed entry: no pre-start close to compare": 5
+  },
+  "mean": {
+   "hi": 0.001660335748536293,
+   "lo": -0.013163658410391283,
+   "n_clusters": 24,
+   "point": -0.00533129515447037,
+   "se": 0.003766299994885984
+  },
+  "mean_after_fees": {
+   "hi": 0.0010663152103657892,
+   "lo": -0.013757837522526234,
+   "n_clusters": 24,
+   "point": -0.005938797627934347,
+   "se": 0.0037656021379514856
+  },
+  "n": 24,
+  "share_positive": 0.2916666666666667
+ },
+ "concentration": {
+  "best5": [
+   "P-625bde1ddf",
+   "P-c10f8fd63c",
+   "P-17ee716853",
+   "P-2368381ec2",
+   "P-1cd084450e"
+  ],
+  "rest_pnl": "16.11723",
+  "rest_roi": "0.001127495581712039755230491356",
+  "top2_ids": [
+   "P-625bde1ddf",
+   "P-c10f8fd63c"
+  ],
+  "top2_pnl": "391.946",
+  "worst5": [
+   "P-8605f10410",
+   "P-b8aa833f70",
+   "P-272c9281bf",
+   "P-af0e9ba36e",
+   "P-dc946c6090"
+  ]
+ },
+ "counts": {
+  "closed": 230,
+  "exited": 22,
+  "fills": 448,
+  "markets": 227,
+  "open": 4,
+  "orders": 324,
+  "positions": 234,
+  "settled": 208,
+  "settled_markets": 208
+ },
+ "drawdown": {
+  "final": "408.06323",
+  "max_drawdown": "650.042",
+  "peak": "910.007",
+  "peak_at": "2026-02-04T02:14:30.845638Z",
+  "trough_at": "2026-02-13T05:05:26.006764Z"
+ },
+ "fee_pct_notional": "0.001464662777237548243103099884",
+ "fees_all": "23.807",
+ "fees_closed": "21.107",
+ "fill_cash_total": "-13098.67445",
+ "first_entry": "2026-01-10T22:17:44.120773Z",
+ "gross_pnl_before_fees": "429.17023",
+ "groups": {
+  "exit": [
+   {
+    "capital": "13340.53877",
+    "fees": "18.129",
+    "group": "held to settlement",
+    "held": 208,
+    "held_implied": 129.005878878315,
+    "held_won": 129.0,
+    "n": 208,
+    "pnl": "796.98223",
+    "roi": "0.05974138254387757384404348161",
+    "wins": 128
+   },
+   {
+    "capital": "1295.232",
+    "fees": "2.978",
+    "group": "sold before settlement",
+    "held": 0,
+    "held_implied": 0,
+    "held_won": 0,
+    "n": 22,
+    "pnl": "-388.919",
+    "roi": "-0.3002697586223935171459630398",
+    "wins": 5
+   }
+  ],
+  "kind": [
+   {
+    "capital": "14515.789",
+    "fees": "17.297",
+    "group": "single",
+    "held": 200,
+    "held_implied": 125.40287887831501,
+    "held_won": 123.0,
+    "n": 222,
+    "pnl": "340.305",
+    "roi": "0.0234437824909138593844261583",
+    "wins": 127
+   },
+   {
+    "capital": "119.98177",
+    "fees": "3.81",
+    "group": "combo",
+    "held": 8,
+    "held_implied": 3.603,
+    "held_won": 6.0,
+    "n": 8,
+    "pnl": "67.75823",
+    "roi": "0.5647377097370708900193754435",
+    "wins": 6
+   }
+  ],
+  "league": [
+   {
+    "capital": "6259.446",
+    "fees": "8.065",
+    "group": "cbb",
+    "held": 132,
+    "held_implied": 82.19708632504295,
+    "held_won": 79.0,
+    "n": 147,
+    "pnl": "-364.196",
+    "roi": "-0.05818342390045381012952264466",
+    "wins": 82
+   },
+   {
+    "capital": "6449.814",
+    "fees": "7.048",
+    "group": "nba",
+    "held": 49,
+    "held_implied": 32.921958247707344,
+    "held_won": 31.0,
+    "n": 50,
+    "pnl": "327.246",
+    "roi": "0.05073727707496681299646780512",
+    "wins": 30
+   },
+   {
+    "capital": "740.736",
+    "fees": "0.84",
+    "group": "nfl",
+    "held": 11,
+    "held_implied": 6.92915953920958,
+    "held_won": 10.0,
+    "n": 14,
+    "pnl": "394.631",
+    "roi": "0.5327552596336616554345947814",
+    "wins": 12
+   },
+   {
+    "capital": "119.98177",
+    "fees": "3.81",
+    "group": "combo",
+    "held": 8,
+    "held_implied": 3.603,
+    "held_won": 6.0,
+    "n": 8,
+    "pnl": "67.75823",
+    "roi": "0.5647377097370708900193754435",
+    "wins": 6
+   },
+   {
+    "capital": "1041.767",
+    "fees": "1.319",
+    "group": "nhl",
+    "held": 3,
+    "held_implied": 1.73267476635514,
+    "held_won": 2.0,
+    "n": 6,
+    "pnl": "-3.35",
+    "roi": "-0.003215690264713702776148601367",
+    "wins": 2
+   },
+   {
+    "capital": "24.026",
+    "fees": "0.025",
+    "group": "ufc",
+    "held": 5,
+    "held_implied": 1.6219999999999999,
+    "held_won": 1.0,
+    "n": 5,
+    "pnl": "-14.026",
+    "roi": "-0.583784233746774327811537501",
+    "wins": 1
+   }
+  ],
+  "month": [
+   {
+    "capital": "13025.628",
+    "fees": "15.483",
+    "group": "2026-02",
+    "held": 151,
+    "held_implied": 93.62677718374391,
+    "held_won": 90.0,
+    "n": 169,
+    "pnl": "22.67",
+    "roi": "0.001740415126241897895441202528",
+    "wins": 92
+   },
+   {
+    "capital": "1318.481",
+    "fees": "1.454",
+    "group": "2026-01",
+    "held": 25,
+    "held_implied": 15.508417871041683,
+    "held_won": 17.0,
+    "n": 29,
+    "pnl": "357.315",
+    "roi": "0.2710050429243955733908945218",
+    "wins": 19
+   },
+   {
+    "capital": "171.68",
+    "fees": "0.36",
+    "group": "2026-03",
+    "held": 24,
+    "held_implied": 16.267683823529413,
+    "held_won": 16.0,
+    "n": 24,
+    "pnl": "-39.68",
+    "roi": "-0.2311276794035414725069897484",
+    "wins": 16
+   },
+   {
+    "capital": "119.98177",
+    "fees": "3.81",
+    "group": "2026-09",
+    "held": 8,
+    "held_implied": 3.603,
+    "held_won": 6.0,
+    "n": 8,
+    "pnl": "67.75823",
+    "roi": "0.5647377097370708900193754435",
+    "wins": 6
+   }
+  ],
+  "price": [
+   {
+    "capital": "2807.9702",
+    "fees": "3.443",
+    "group": "0.60-0.80",
+    "held": 63,
+    "held_implied": 44.16913066793944,
+    "held_won": 50.0,
+    "n": 64,
+    "pnl": "309.9058",
+    "roi": "0.1103664846585622596707044825",
+    "wins": 50
+   },
+   {
+    "capital": "9214.66135",
+    "fees": "9.649",
+    "group": "0.80-1.00",
+    "held": 57,
+    "held_implied": 50.60575599820954,
+    "held_won": 49.0,
+    "n": 61,
+    "pnl": "212.37165",
+    "roi": "0.02304714649117300442082985502",
+    "wins": 49
+   },
+   {
+    "capital": "1726.7211",
+    "fees": "4.189",
+    "group": "0.40-0.60",
+    "held": 46,
+    "held_implied": 23.731388962711105,
+    "held_won": 24.0,
+    "n": 51,
+    "pnl": "-284.9141",
+    "roi": "-0.1650029642887898920097750586",
+    "wins": 24
+   },
+   {
+    "capital": "780.08212",
+    "fees": "3.114",
+    "group": "0.20-0.40",
+    "held": 31,
+    "held_implied": 8.97475139760307,
+    "held_won": 5.0,
+    "n": 37,
+    "pnl": "61.92488",
+    "roi": "0.07938251424093658242032261937",
+    "wins": 7
+   },
+   {
+    "capital": "106.336",
+    "fees": "0.712",
+    "group": "0.00-0.20",
+    "held": 11,
+    "held_implied": 1.524851851851852,
+    "held_won": 1.0,
+    "n": 17,
+    "pnl": "108.775",
+    "roi": "1.022936728859464339452302137",
+    "wins": 3
+   }
+  ],
+  "side": [
+   {
+    "capital": "7303.44677",
+    "fees": "12.76",
+    "group": "YES",
+    "held": 124,
+    "held_implied": 70.90817074002614,
+    "held_won": 70.0,
+    "n": 137,
+    "pnl": "-23.65577",
+    "roi": "-0.003238987117311460873425384053",
+    "wins": 71
+   },
+   {
+    "capital": "7332.324",
+    "fees": "8.347",
+    "group": "NO",
+    "held": 84,
+    "held_implied": 58.09770813828887,
+    "held_won": 59.0,
+    "n": 93,
+    "pnl": "431.719",
+    "roi": "0.05887887660174318538024233517",
+    "wins": 62
+   }
+  ],
+  "size": [
+   {
+    "capital": "686.04149",
+    "fees": "2.602",
+    "group": "< $10",
+    "held": 92,
+    "held_implied": 50.25522585327099,
+    "held_won": 47.0,
+    "n": 104,
+    "pnl": "-150.70049",
+    "roi": "-0.2196667289029414241403971063",
+    "wins": 50
+   },
+   {
+    "capital": "1003.90028",
+    "fees": "3.699",
+    "group": "$10-25",
+    "held": 46,
+    "held_implied": 25.822533444114033,
+    "held_won": 30.0,
+    "n": 48,
+    "pnl": "87.64472",
+    "roi": "0.08730420913917864431714273454",
+    "wins": 31
+   },
+   {
+    "capital": "998.851",
+    "fees": "1.127",
+    "group": "$25-50",
+    "held": 21,
+    "held_implied": 15.196769517044334,
+    "held_won": 11.0,
+    "n": 24,
+    "pnl": "-179.042",
+    "roi": "-0.1792479559013306288925975946",
+    "wins": 11
+   },
+   {
+    "capital": "1987.711",
+    "fees": "2.205",
+    "group": "$50-100",
+    "held": 21,
+    "held_implied": 15.54161017606033,
+    "held_won": 17.0,
+    "n": 23,
+    "pnl": "63.899",
+    "roi": "0.03214702740992025500688983459",
+    "wins": 17
+   },
+   {
+    "capital": "2920.759",
+    "fees": "3.834",
+    "group": "$100-250",
+    "held": 16,
+    "held_implied": 11.829894426647114,
+    "held_won": 12.0,
+    "n": 17,
+    "pnl": "61.343",
+    "roi": "0.02100241752229471859882996166",
+    "wins": 13
+   },
+   {
+    "capital": "7038.508",
+    "fees": "7.64",
+    "group": ">= $250",
+    "held": 12,
+    "held_implied": 10.3598454611782,
+    "held_won": 12.0,
+    "n": 14,
+    "pnl": "524.919",
+    "roi": "0.07457816344032002236837693443",
+    "wins": 11
+   }
+  ],
+  "timing": [
+   {
+    "capital": "9192.56977",
+    "fees": "15.314",
+    "group": "in-play",
+    "held": 136,
+    "held_implied": 84.97690705612284,
+    "held_won": 84.0,
+    "n": 153,
+    "pnl": "51.03923",
+    "roi": "0.005552226556557318356910333246",
+    "wins": 87
+   },
+   {
+    "capital": "4540.989",
+    "fees": "4.778",
+    "group": "unknown",
+    "held": 46,
+    "held_implied": 29.256968336082476,
+    "held_won": 28.0,
+    "n": 48,
+    "pnl": "218.019",
+    "roi": "0.04801134730782215063722902654",
+    "wins": 28
+   },
+   {
+    "capital": "706.859",
+    "fees": "0.745",
+    "group": "pregame",
+    "held": 23,
+    "held_implied": 13.070601083707288,
+    "held_won": 16.0,
+    "n": 24,
+    "pnl": "195.129",
+    "roi": "0.2760508106991634823918207167",
+    "wins": 16
+   },
+   {
+    "capital": "195.353",
+    "fees": "0.27",
+    "group": "mixed",
+    "held": 3,
+    "held_implied": 1.7014024024024024,
+    "held_won": 1.0,
+    "n": 5,
+    "pnl": "-56.124",
+    "roi": "-0.2872953064452555118170696124",
+    "wins": 2
+   }
+  ]
+ },
+ "held": {
+  "breakeven_with_fees": 129.31292760385332,
+  "brier_entry_price": 0.1668661645006748,
+  "excess": {
+   "hi": 0.060216521780033894,
+   "lo": -0.04286919380116568,
+   "n_clusters": 40,
+   "point": -2.8263838052888364e-05,
+   "se": 0.026311833316043243
+  },
+  "excess_after_fees": {
+   "hi": 0.05828480974983235,
+   "lo": -0.0442645341693331,
+   "n_clusters": 40,
+   "point": -0.0015044596339100597,
+   "se": 0.026095326476104873
+  },
+  "implied": 129.005878878315,
+  "n": 208,
+  "roi_ci_day": {
+   "hi": 0.14426770131451666,
+   "lo": -0.025520358044692572,
+   "n_clusters": 40,
+   "point": 0.05974138254387758,
+   "se": 0.042532745302333815
+  },
+  "won": 129.0
+ },
+ "last_fill": "2026-09-17T09:19:24.966804Z",
+ "manifest": {
+  "activity_counts": {
+   "ACCOUNT_WITHDRAWAL": 2,
+   "POSITION_RESOLUTION": 208,
+   "REFERRAL_BONUS": 2,
+   "TRADE": 448,
+   "TRANSFER": 2
+  },
+  "first_fill_utc": "2026-01-10T22:17:44.120773Z",
+  "last_fill_utc": "2026-09-17T09:19:24.966804Z",
+  "non_trading_credits_usd": {
+   "REFERRAL_BONUS": "30",
+   "TRANSFER": "237.074"
+  },
+  "positions_endpoint_eof": true,
+  "pulled_at_utc_date": "2026-09-17",
+  "raw_sha256": "379b5cddeea34e66bfb6ceb5c36bf876ccf947c7e1184bd441d0f2a63089dc1f",
+  "source": "Polymarket US API: GET /v1/portfolio/activities (all pages) and GET /v1/portfolio/positions, pulled read-only with the account's own key",
+  "withdrawals": "count only; amounts are personal and not trading results"
+ },
+ "open_capital_at_risk": "49.99768",
+ "open_net_cash": "-49.99768",
+ "payouts_total": "13456.74",
+ "pnl_ci_day": {
+  "hi": 1561.853545,
+  "lo": -722.78721625,
+  "n_clusters": 40,
+  "point": 408.0632300000001,
+  "se": 582.5346732803201
+ },
+ "realized_pnl": "408.06323",
+ "roi": "0.02788122582764392394210749175",
+ "roi_ci_day": {
+  "hi": 0.12165157828904768,
+  "lo": -0.053408861520660614,
+  "n_clusters": 40,
+  "point": 0.02788122582764393,
+  "se": 0.04401229253680474
+ },
+ "roi_ci_iid": {
+  "hi": 0.10879507668861736,
+  "lo": -0.0595944078381286,
+  "n_clusters": 230,
+  "point": 0.027881225827643928,
+  "se": 0.04276860919544217
+ },
+ "size_quantiles": {
+  "max": 1008.601,
+  "median": 14.96699,
+  "min": 0.1,
+  "p25": 9.36925,
+  "p75": 49.6355,
+  "p90": 156.31050000000013
+ },
+ "traded_notional": "16254.25345",
+ "win_rate": {
+  "hi": 0.6402835449452624,
+  "lo": 0.5136669144025139,
+  "n": 230,
+  "rate": 0.5782608695652174,
+  "wins": 133
+ }
+}

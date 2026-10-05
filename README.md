@@ -14,13 +14,22 @@
 [![ci](https://github.com/crollila/pm-calibration/actions/workflows/ci.yml/badge.svg)](https://github.com/crollila/pm-calibration/actions/workflows/ci.yml)
 [![python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](https://www.python.org/)
 [![ruff](https://img.shields.io/badge/lint-ruff-261230)](https://github.com/astral-sh/ruff)
-[![tests](https://img.shields.io/badge/tests-271%20passing-brightgreen)](tests/)
+[![tests](https://img.shields.io/badge/tests-277%20passing-brightgreen)](tests/)
 [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 This is a research repository, not a trading system. It places no orders and contains no
 credentials for doing so. The deliverable is a defensible empirical answer with plots and
 honest confidence intervals — including, quite possibly, the answer "no, and here is the
 evidence that the apparent edge was spread, fees and correlated observations."
+
+> ### → [Live trading case study](LIVE_TRADING_CASE_STUDY.md)
+>
+> The same standards applied to real money: every fill and settlement from a live
+> Polymarket US account, January–September 2026, accounted exactly, reconciled against
+> the exchange's own position records, and read against entry prices, closing lines,
+> concentration and clustered confidence intervals. Real-capital results are kept
+> separate from the research, backtest and paper work, and each is labelled as such.
+> Built by [`live/`](live/) from sanitized records in [`data/live/`](data/live/).
 
 ---
 
@@ -756,10 +765,19 @@ pmcal/
                         polymarket_history.py  kalshi_history.py   (backfill)
 analysis/
   calibration.py  backtest.py  kelly.py  plots.py  run_all.py
+live/                   live-capital case study (see LIVE_TRADING_CASE_STUDY.md)
+  ingest.py             private raw account history -> sanitized CSVs (salted-HMAC ids)
+  reference.py          public scheduled starts + pre-start prices (CLV proxy)
+  ledger.py             exact Decimal position accounting: fees, exits, settlement
+  analytics.py          aggregates, clustered bootstrap, drawdown, exchange cross-checks
+  report.py  render.py  reconcile, then write positions.csv, summary.json and the doc
+data/live/              sanitized fills, markets, settlements, positions (committed)
 tests/                  odds, de-vig, fees, no-lookahead, db, stats, panel,
-                        backtest, gamekeys, backfill, resolve, doctests
+                        backtest, gamekeys, backfill, resolve, doctests,
+                        live ledger + live report reconciliation
 deploy/                 systemd units and timers
 ```
 
-Every module is under 300 lines and there are no class hierarchies; the only classes are
-two frozen config dataclasses.
+Every module in `pmcal/` and `analysis/` is under 300 lines and there are no class
+hierarchies; the only classes there are two frozen config dataclasses. `live/` adds one
+plain dataclass (`Position`), and its renderer is a long, linear Markdown template.
